@@ -4,6 +4,10 @@ set -o pipefail
 set -e
 set -x
 
+# define versions
+#   gtest    1.7          (intentionally not latest!)
+export VTAG_GTEST=tags/release-1.7.0
+
 # OS version info
 grep VERSION /etc/os-release
 
@@ -11,6 +15,7 @@ grep VERSION /etc/os-release
 cd /tmp
 git clone https://github.com/google/googletest.git
 cd googletest
+git checkout $VTAG_GTEST
 mkdir build
 cd build
 cmake ..
