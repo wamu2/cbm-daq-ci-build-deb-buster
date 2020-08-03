@@ -5,8 +5,8 @@ set -e
 set -x
 
 # define versions
-#   gtest    1.7          (intentionally not latest!)
-export VTAG_GTEST=tags/release-1.7.0
+#   gtest    1.10
+export VTAG_GTEST=tags/release-1.10.0
 
 # OS version info
 grep VERSION /etc/os-release
